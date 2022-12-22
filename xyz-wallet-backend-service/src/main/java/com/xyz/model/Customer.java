@@ -18,6 +18,6 @@ public class Customer {
     @Column(name = "EMAIL")
     private String email;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL) @JoinColumn( name = "account_num" )
     private Account account;
 }

@@ -14,7 +14,10 @@ public class Account {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long number;
+    private Long account_num;
 
     private int balance;
+
+    @OneToOne(mappedBy = "account")
+    private Customer customer;
 }

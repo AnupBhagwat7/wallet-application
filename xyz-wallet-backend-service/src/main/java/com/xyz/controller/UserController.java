@@ -1,5 +1,6 @@
 package com.xyz.controller;
 
+import com.xyz.model.Account;
 import com.xyz.model.Customer;
 import com.xyz.service.AccountService;
 import com.xyz.service.CustomerService;
@@ -24,6 +25,8 @@ public class UserController {
 
         Customer customer1 =customerService.saveCustomer(customer);
 
-        customerService.createWalletAccount(customer1);
+        accountService.createAccount(customer1);
+
+        return customer1;
     }
 }
